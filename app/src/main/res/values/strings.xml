@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShoeShop</string>
+    <string name="text_user">Tài khoản:</string>
+    <string name="text_password">Mật khẩu:</string>
+</resources>
