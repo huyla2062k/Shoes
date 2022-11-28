@@ -48,7 +48,8 @@
                 android:id="@+id/edUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/user" />
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="@dimen/_5sdp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -64,11 +65,19 @@
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edPassword"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/key" />
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/key"
+                    android:inputType="textPassword"
+                    android:drawablePadding="@dimen/_5sdp"
+                    />
+            </RelativeLayout>
+
         </LinearLayout>
 
         <TextView

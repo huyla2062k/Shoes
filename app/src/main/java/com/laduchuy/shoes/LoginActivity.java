@@ -33,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         tvSignUp = findViewById(R.id.tvSignup);
 
         dbHelper = new DBHelper(this);
-        //dbHelper.insertUser(new User("Lã Đức Huy","lahuy2062k","0836870764","Nam Từ Liêm, Hà Nội","Huy2062k@",true));
+       // dbHelper.insertUser(new User("Lã Đức Huy","lahuy2062k","0836870764","Nam Từ Liêm, Hà Nội","Huy2062k@",true));
+        dbHelper.insertUser(new User("Lã Đức Huy","lahuy2062k123","0836870764","Nam Từ Liêm, Hà Nội","Huy2062k@",false));
         userList = dbHelper.getAllUser();
         btnLogin.setOnClickListener(view -> {
             String username =edUsername.getText().toString();
@@ -58,8 +59,13 @@ public class LoginActivity extends AppCompatActivity {
                             intent.putExtra("login", bundle);
                             startActivity(intent);
                         }
+//                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putSerializable("user", user);
+//                        intent.putExtra("login", bundle);
+//                        startActivity(intent);
                     }
-                    else check++;
+
                 }
                 else check1++;
             }

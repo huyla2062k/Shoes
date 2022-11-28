@@ -25,6 +25,8 @@ public class SignupActivity extends AppCompatActivity {
 
     private static final String PASSWORD_PATTERN =
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+    private static final String PHONENUMBER_PATTERN =
+            "^([0-9]).{10}$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +52,13 @@ public class SignupActivity extends AppCompatActivity {
             if (checkUser(userName,dbHelper.getAllUser())){
                 if (checkPassword(password)){
                     if(checkPasswor2(password,password2)){
-                        User user = new User(name,userName,phoneNumber,address,password,false);
-                        dbHelper.insertUser(user);
-                        Toast.makeText(getBaseContext(),"Đăng ký thành công",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(SignupActivity.this,LoginActivity.class);
-                        startActivity(intent);
+                        //if(checkPhoneNumber(phoneNumber)) {
+                            User user = new User(name, userName, phoneNumber, address, password, false);
+                            dbHelper.insertUser(user);
+                            Toast.makeText(getBaseContext(), "Đăng ký thành công", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                       // }else Toast.makeText(getBaseContext(),"Số điện thoại không đúng",Toast.LENGTH_LONG).show();
                     }else Toast.makeText(getBaseContext(),"Xác nhận mật khẩu không chính xác",Toast.LENGTH_LONG).show();
                 }else Toast.makeText(getBaseContext(),"Mật khẩu phải từ 8-20 ký tự bao gôm chữ hoa chữ thường, số và ký tự đặc biệt",Toast.LENGTH_LONG).show();
             }else Toast.makeText(getBaseContext(),"Tài khoản đã tồn tại",Toast.LENGTH_LONG).show();
@@ -68,6 +72,12 @@ public class SignupActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private boolean checkPhoneNumber(String phoneNumber) {
+        Pattern pattern = Pattern.compile(PHONENUMBER_PATTERN);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
     }
 
     private boolean checkPasswor2(String password, String password2) {
