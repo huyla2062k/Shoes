@@ -2,4 +2,22 @@
     <string name="app_name">ShoeShop</string>
     <string name="text_user">Tài khoản:</string>
     <string name="text_password">Mật khẩu:</string>
+    <string-array name="size_array">
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+    </string-array>
+    <string-array name="color_array">
+        <item>Trắng</item>
+        <item>Đen</item>
+        <item>Đỏ</item>
+        <item>Xanh</item>
+        <item>Xám</item>
+    </string-array>
+
 </resources>

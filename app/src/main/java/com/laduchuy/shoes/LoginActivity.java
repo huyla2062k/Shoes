@@ -33,8 +33,9 @@ public class LoginActivity extends AppCompatActivity {
         tvSignUp = findViewById(R.id.tvSignup);
 
         dbHelper = new DBHelper(this);
+
        // dbHelper.insertUser(new User("Lã Đức Huy","lahuy2062k","0836870764","Nam Từ Liêm, Hà Nội","Huy2062k@",true));
-        dbHelper.insertUser(new User("Lã Đức Huy","lahuy2062k123","0836870764","Nam Từ Liêm, Hà Nội","Huy2062k@",false));
+      //  dbHelper.insertUser(new User("Lã Đức Huy","lahuy2062k123","0836870764","Nam Từ Liêm, Hà Nội","Huy2062k@",false));
         userList = dbHelper.getAllUser();
         btnLogin.setOnClickListener(view -> {
             String username =edUsername.getText().toString();
@@ -69,8 +70,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else check1++;
             }
-            if (check1!=0) Toast.makeText(this,"Tên đăng nhập không đúng",Toast.LENGTH_LONG).show();
-            if (check!=0) Toast.makeText(this,"Mật khẩu không đúng",Toast.LENGTH_LONG).show();
+            //if (check1!=0) Toast.makeText(this,"Tên đăng nhập không đúng",Toast.LENGTH_LONG).show();
+            //if (check!=0) Toast.makeText(this,"Mật khẩu không đúng",Toast.LENGTH_LONG).show();
         });
         tvSignUp.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this,SignupActivity.class);

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/hight"
+        android:title="Giá: Cao - Thấp"/>
+    <item android:id="@+id/low"
+        android:title="Giá: Thấp - Cao"/>
+</menu>

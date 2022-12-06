@@ -2,13 +2,15 @@ package com.laduchuy.shoes.object;
 
 import android.net.Uri;
 
-public class Product {
-    int productCode;
-    String name,img,describe,color,size;
-    int price,number;
+import java.io.Serializable;
 
-    public Product(int productCode, String name, String img, String describe, String color, String size, int price, int number) {
-        this.productCode = productCode;
+public class Product implements Serializable {
+    int productCode;
+    String name,img,describe,color;
+    int price,number,size;
+
+    public Product(int productCode,String name, String img, String describe, String color, int size, int price, int number) {
+        this.productCode=productCode;
         this.name = name;
         this.img = img;
         this.describe = describe;
@@ -58,11 +60,11 @@ public class Product {
         this.color = color;
     }
 
-    public String getSize() {
+    public int getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(int size) {
         this.size = size;
     }
 

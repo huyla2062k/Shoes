@@ -46,11 +46,23 @@
 
             </androidx.appcompat.widget.Toolbar>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sort"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/imgSort"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_8sdp"
                 android:background="@drawable/search_backgroud">
+
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -66,8 +78,10 @@
                     android:layout_alignParentRight="true"
                     android:src="@drawable/ic_baseline_search_24"
                     android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/imgSearch"/>
+                    android:id="@+id/imgSearch"
+                    />
             </RelativeLayout>
+            </LinearLayout>
 
 
             <androidx.recyclerview.widget.RecyclerView

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/app_name"/>
-    <item android:title="@string/app_name"/>
-    <item android:title="@string/app_name"/>
+    <item android:title="Đơn hàng"
+        android:id="@+id/itOrder"/>
+
+    <item android:title="Đăng xuất"
+        android:id="@+id/itLogout"/>
 
 </menu>
