@@ -1,6 +1,5 @@
 package com.laduchuy.shoes;
 
-import com.laduchuy.shoes.DB.DBHelper;
 import com.laduchuy.shoes.object.Product;
 import com.laduchuy.shoes.object.ProductCart;
 

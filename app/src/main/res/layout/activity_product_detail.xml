@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProductDetailActivity">
+    tools:context=".activity.ProductDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -38,10 +38,10 @@
         android:layout_margin="@dimen/_5sdp">
 
         <ImageView
-            android:id="@+id/tvAva"
+            android:id="@+id/imgAva"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_100sdp"
-            android:src="@drawable/image" />
+            android:src="@drawable/image"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,18 +58,18 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/_16sdp"
                 android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtGia"
+                android:text="300000"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="#BF0101"/>
         </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvDes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
-        android:text="Mô tả: "
-        android:textColor="@color/colorBlack"
-        android:textSize="@dimen/_13sdp"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -190,5 +190,12 @@
             android:text="Thêm vào giỏ hàng"
             android:textColor="@color/colorWhite" />
     </RelativeLayout>
-
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:text="Mô tả: "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_13sdp" />
 </LinearLayout>

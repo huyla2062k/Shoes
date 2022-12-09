@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Đơn hàng"
-        android:id="@+id/itOrder"/>
 
-    <item android:title="Đăng xuất"
-        android:id="@+id/itLogout"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menuHome"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/menumessage"
+            android:icon="@drawable/ic_messa"
+            android:title="Message" />
+        <item
+            android:id="@+id/menunotification"
+            android:icon="@drawable/ic_notification"
+            android:title="Notification" />
+    </group>
+    <item android:title="Profile">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menulogout"
+                    android:icon="@drawable/icon_logout"
+                    android:title="Logout" />
+                <item
+                    android:id="@+id/menuperson"
+                    android:icon="@drawable/ic_profile"
+                    android:title="Person" />
+            </group>
+        </menu>
+
+    </item>
+
+
+    <item android:title="Manager">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menuDonhang"
+                    android:icon="@drawable/icon_qlproduct"
+                    android:title="Đơn hàng" />
+                <item
+                    android:id="@+id/menugiohang"
+                    android:icon="@drawable/icon_giohang"
+                    android:title="Giỏ hàng" />
+            </group>
+        </menu>
+    </item>
 
 </menu>
